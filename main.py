@@ -8,12 +8,13 @@ PATH_OF_GIT_REPO = r'C:/Users/decod/Desktop/Dedicated/.git'
 COMMIT_MESSAGE = 'Stay Focused. Be Committed'
 
 def dedicate():
+    commits = int(input("Enter number of commits to push:  "))
     print("Getting Repository...")
     repo = Repo(PATH_OF_GIT_REPO)
     print("Adding Files...")
     repo.git.add(update=True)
     print("Generating Commits...")
-    for i in tqdm(range(900)):
+    for i in tqdm(range(commits)):
         repo.index.commit(COMMIT_MESSAGE)
     print("Retrieving Remote...")
     origin = repo.remote(name='origin')
