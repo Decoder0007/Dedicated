@@ -13,7 +13,7 @@ def dedicate():
     while True:
         os.system("cls")
         print("Generating Commits...")
-        for i in tqdm(range(10000)):
+        for i in tqdm(range(10)):
             repo.index.commit('Stay Focused. Be Committed')
         print("Retrieving Remote...")
         origin = repo.remote(name='origin')
