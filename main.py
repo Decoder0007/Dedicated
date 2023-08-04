@@ -1,7 +1,10 @@
 from git import Repo
 from tqdm import tqdm
 
-PATH_OF_GIT_REPO = r'/Users/decoder0007/Desktop/Dedicated/.git'  # make sure .git folder is properly configured
+# MacOS: r'/Users/decoder0007/Desktop/Dedicated/.git'
+# Windows: r'C:/Users/decod/Desktop/Dedicated/.git'
+
+PATH_OF_GIT_REPO = r'C:/Users/decod/Desktop/Dedicated/.git'
 COMMIT_MESSAGE = 'Stay Focused. Be Committed'
 
 def dedicate():
