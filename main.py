@@ -11,7 +11,7 @@ def dedicate():
     print("Adding Files...")
     repo.git.add(update=True)
     print("Generating Commits...")
-    for i in tqdm(range(100000)):
+    for i in tqdm(range((314159-285837)-100)):
         repo.index.commit('Stay Focused. Be Committed')
     print("Retrieving Remote...")
     origin = repo.remote(name='origin')
