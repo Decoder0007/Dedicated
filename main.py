@@ -10,15 +10,13 @@ def dedicate():
     repo = Repo(PATH_OF_GIT_REPO)
     print("Adding Files...")
     repo.git.add(update=True)
-    while True:
-        os.system("cls")
-        print("Generating Commits...")
-        for i in tqdm(range(10)):
-            repo.index.commit('Stay Focused. Be Committed')
-        print("Retrieving Remote...")
-        origin = repo.remote(name='origin')
-        print("Pushing...")
-        origin.push()
+    print("Generating Commits...")
+    for i in tqdm(range(100000)):
+        repo.index.commit('Stay Focused. Be Committed')
+    print("Retrieving Remote...")
+    origin = repo.remote(name='origin')
+    print("Pushing...")
+    origin.push()
     print("Finish")
 
 dedicate()
