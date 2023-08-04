@@ -5,7 +5,6 @@ from tqdm import tqdm
 # Windows: r'C:/Users/decod/Desktop/Dedicated/.git'
 
 PATH_OF_GIT_REPO = r'C:/Users/decod/Desktop/Dedicated/.git'
-COMMIT_MESSAGE = 'Stay Focused. Be Committed'
 
 def dedicate():
     commits = int(input("Enter number of commits to push:  "))
@@ -15,7 +14,7 @@ def dedicate():
     repo.git.add(update=True)
     print("Generating Commits...")
     for i in tqdm(range(commits)):
-        repo.index.commit(COMMIT_MESSAGE)
+        repo.index.commit('Stay Focused. Be Committed')
     print("Retrieving Remote...")
     origin = repo.remote(name='origin')
     print("Pushing...")
